@@ -152,6 +152,7 @@ export const farmaciaDelCentro: Farmacia = {
       'OSPATRONES',
       'OSPESGA',
       'OSTEL Jubilados',
+      'PAMI',
       'Plenit',
       'Poder Judicial',
       'Prevención Salud',
