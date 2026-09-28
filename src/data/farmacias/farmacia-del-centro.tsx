@@ -42,10 +42,9 @@ export const farmaciaDelCentro: Farmacia = {
     linea: '#D6E8E6',
   },
 
-  // OJO: cambiar por el dominio real antes de publicar. De esto salen el
-  // canonical, el sitemap y los links que se ven al compartir por WhatsApp.
+  // De acá salen el canonical, el sitemap y los links que se ven al compartir.
   sitio: {
-    url: 'https://farmaciadelcentro.com.ar',
+    url: 'https://farmadelcentro.com',
     // ogImage: '/og.png',
   },
 
