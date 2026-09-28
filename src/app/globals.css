@@ -94,6 +94,10 @@ h1,h2,h3{font-family:var(--fuente-titulos),sans-serif;color:var(--teal-deep);lin
 .status .dot{width:9px;height:9px;border-radius:50%;background:#22A565;box-shadow:0 0 0 4px rgba(34,165,101,.2)}
 .hours-card.is-closed .status{background:#F5EEEC;color:#7A4236}
 .hours-card.is-closed .status .dot{background:#C0705F;box-shadow:0 0 0 4px rgba(192,112,95,.2)}
+/* Todavía no sabe la hora del visitante: el verde de "abierto ahora" no va. */
+.hours-card.is-static .status{background:var(--mist);color:var(--teal-deep)}
+.hours-card.is-static .status .dot{background:var(--teal);box-shadow:none;opacity:.55}
+.hours-card.is-static .bar-fill{background:var(--line);transition:none}
 .now{color:var(--muted);font-weight:500;font-variant-numeric:tabular-nums}
 .hours-big{
   font-family:var(--fuente-titulos),sans-serif;font-weight:700;color:var(--teal-deep);

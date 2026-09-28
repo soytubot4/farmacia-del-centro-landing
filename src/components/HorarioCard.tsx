@@ -1,7 +1,13 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { estadoHorario, marcasBarra, rangoTexto, type EstadoHorario } from '@/lib/horario';
+import {
+  estadoHorario,
+  marcasBarra,
+  rangoTexto,
+  turnoTexto,
+  type EstadoHorario,
+} from '@/lib/horario';
 import type { Horario } from '@/lib/tipos';
 
 /**
@@ -11,6 +17,11 @@ import type { Horario } from '@/lib/tipos';
  * todos los días". Recién cuando monta en el navegador calcula si está abierta
  * ahora. Tiene que ser así porque el sitio es estático: si el HTML dijera
  * "Abierto ahora", diría lo mismo a las cuatro de la mañana.
+ *
+ * Mientras tanto va en modo `is-static`: sin puntito verde, con la barra
+ * entera pintada (es el turno completo, no "recién abrimos") y sin marcador.
+ * Si no se distingue del estado en vivo, una tarjeta congelada —el HTML
+ * abierto como archivo, el JS bloqueado— pasa por información del momento.
  */
 export function HorarioCard({ horario }: { horario: Horario }) {
   const [estado, setEstado] = useState<EstadoHorario | null>(null);
@@ -22,13 +33,16 @@ export function HorarioCard({ horario }: { horario: Horario }) {
     return () => clearInterval(id);
   }, [horario]);
 
+  const estatico = estado == null;
   const cerrada = estado != null && !estado.abierto;
   const pct = estado?.abierto ? `${estado.progreso.toFixed(2)}%` : '0%';
   const marcas = marcasBarra(horario);
 
   return (
     <div className="hours-wrap">
-      <div className={`hours-card${cerrada ? ' is-closed' : ''}`}>
+      <div
+        className={`hours-card${cerrada ? ' is-closed' : ''}${estatico ? ' is-static' : ''}`}
+      >
         <div className="hours-top">
           <span className="status">
             <span className="dot" aria-hidden="true" />
@@ -50,8 +64,8 @@ export function HorarioCard({ horario }: { horario: Horario }) {
 
         <div className="bar" aria-hidden="true">
           <div className="bar-track">
-            <div className="bar-fill" style={{ width: pct }} />
-            <span className="bar-marker" style={{ left: pct }} />
+            <div className="bar-fill" style={{ width: estatico ? '100%' : pct }} />
+            {estado?.abierto && <span className="bar-marker" style={{ left: pct }} />}
           </div>
           <div className="bar-labels">
             {marcas.map((m) => (
@@ -67,7 +81,7 @@ export function HorarioCard({ horario }: { horario: Horario }) {
         </div>
 
         <p className="hours-next" aria-live="polite">
-          {estado ? estado.proximo : horario.detalle}
+          {estado ? estado.proximo : turnoTexto(horario)}
         </p>
       </div>
     </div>

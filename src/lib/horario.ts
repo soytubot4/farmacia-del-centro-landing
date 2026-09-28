@@ -68,6 +68,15 @@ export function rangoTexto(h: Horario): string {
   return `${hora(aMinutos(h.abre))} a ${hora(aMinutos(h.cierra))}`;
 }
 
+/**
+ * "17 h seguidas, todos los días" — lo que dice la tarjeta mientras todavía no
+ * sabe la hora del visitante (el HTML estático, o si el JS no corre).
+ * No puede hablar de "ahora": esto queda escrito igual a las 4 de la mañana.
+ */
+export function turnoTexto(h: Horario): string {
+  return `${duracion(duracionTurno(h))} seguidas, ${h.texto.toLowerCase()}`;
+}
+
 interface Ahora {
   /** 0 = domingo. */
   dia: number;
