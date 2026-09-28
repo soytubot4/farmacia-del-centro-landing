@@ -131,6 +131,7 @@ export const farmaciaDelCentro: Farmacia = {
     // En orden alfabético: con el buscador arriba, es lo que hace que cada uno
     // encuentre la suya de un vistazo.
     items: [
+      'AMR',
       'Arte de Curar',
       'Británica',
       'Caja Forense',
