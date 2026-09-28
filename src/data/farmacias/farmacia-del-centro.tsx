@@ -120,8 +120,11 @@ export const farmaciaDelCentro: Farmacia = {
       nombre: 'PedidosYa',
       url: 'https://www.pedidosya.com.ar/restaurantes/rosario/farmacia-del-centro-d15da6b3-4b32-4d20-85ff-cca9b09e318e-menu',
     },
-    { nombre: 'Rappi', url: 'https://www.rappi.com.ar' },
-    { nombre: 'Uber Eats', url: 'https://www.ubereats.com/ar' },
+    { nombre: 'Rappi', url: 'https://www.rappi.com.ar/tiendas/231017-farmaciadelcentroar-mt-nc' },
+    {
+      nombre: 'Uber Eats',
+      url: 'https://www.ubereats.com/cr/store/farmacia-del-centro-corrientes/RheCH1b_WWqYeiRSL4XBwQ',
+    },
   ],
 
   obrasSociales: {
