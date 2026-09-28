@@ -116,7 +116,10 @@ export const farmaciaDelCentro: Farmacia = {
 
   // Pegá el link de la farmacia en cada app. Si queda vacío, no se muestra la sección.
   tiendas: [
-    { nombre: 'PedidosYa', url: 'https://www.pedidosya.com.ar' },
+    {
+      nombre: 'PedidosYa',
+      url: 'https://www.pedidosya.com.ar/restaurantes/rosario/farmacia-del-centro-d15da6b3-4b32-4d20-85ff-cca9b09e318e-menu',
+    },
     { nombre: 'Rappi', url: 'https://www.rappi.com.ar' },
     { nombre: 'Uber Eats', url: 'https://www.ubereats.com/ar' },
   ],
