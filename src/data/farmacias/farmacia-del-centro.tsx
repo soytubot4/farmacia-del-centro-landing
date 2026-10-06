@@ -29,8 +29,17 @@ export const farmaciaDelCentro: Farmacia = {
   marca: {
     linea1: 'FARMACIA',
     linea2: 'DEL CENTRO',
+    /**
+     * El corazón del logo, solo y en relleno.
+     *
+     * No es el logo completo a propósito: a 16 píxeles las manos y la cruz se
+     * convierten en una mancha gris. El corazón es la forma que sobrevive al
+     * tamaño de una pestaña y sigue siendo de la marca — una cruz de farmacia
+     * genérica, que es lo que había antes, no distingue a esta farmacia de
+     * ninguna otra.
+     */
     favicon:
-      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%233A9B95'/%3E%3Cpath d='M43 26h14v17h17v14H57v17H43V57H26V43h17z' fill='white'/%3E%3C/svg%3E",
+      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%233A9B95'/%3E%3Cpath d='M50 78C32 64 14 50 14 34C14 22.5 22.5 14 33.5 14C42 14 48 18.5 50 25C52 18.5 58 14 66.5 14C77.5 14 86 22.5 86 34C86 50 68 64 50 78Z' fill='white'/%3E%3C/svg%3E",
   },
 
   colores: {
