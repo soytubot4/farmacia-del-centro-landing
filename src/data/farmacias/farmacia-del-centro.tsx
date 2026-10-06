@@ -30,16 +30,16 @@ export const farmaciaDelCentro: Farmacia = {
     linea1: 'FARMACIA',
     linea2: 'DEL CENTRO',
     /**
-     * El corazón del logo, solo y en relleno.
+     * El logo, igual que en la web.
      *
-     * No es el logo completo a propósito: a 16 píxeles las manos y la cruz se
-     * convierten en una mancha gris. El corazón es la forma que sobrevive al
-     * tamaño de una pestaña y sigue siendo de la marca — una cruz de farmacia
-     * genérica, que es lo que había antes, no distingue a esta farmacia de
-     * ninguna otra.
+     * Dos cosas cambian respecto del original: el trazo pasa de 2.3 a 4.2
+     * porque a 16 píxeles las líneas finas directamente no se dibujan, y la
+     * mano derecha va escrita entera en vez de un `<use href="#mano">` — dentro
+     * de un data URI no hay documento donde resolver esa referencia y el ícono
+     * saldría con una sola mano.
      */
     favicon:
-      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%233A9B95'/%3E%3Cpath d='M50 78C32 64 14 50 14 34C14 22.5 22.5 14 33.5 14C42 14 48 18.5 50 25C52 18.5 58 14 66.5 14C77.5 14 86 22.5 86 34C86 50 68 64 50 78Z' fill='white'/%3E%3C/svg%3E",
+      "data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20100%20100%27%3E%3Ccircle%20cx%3D%2750%27%20cy%3D%2750%27%20r%3D%2750%27%20fill%3D%27%233A9B95%27%2F%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27%23fff%27%20stroke-width%3D%274.2%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%22M50%2057C40.5%2049.5%2029.5%2042%2029.5%2033.5C29.5%2027.5%2034%2023%2039.8%2023C44.3%2023%2047.6%2025.5%2050%2029C52.4%2025.5%2055.7%2023%2060.2%2023C66%2023%2070.5%2027.5%2070.5%2033.5C70.5%2042%2059.5%2049.5%2050%2057Z%22%2F%3E%3Cpath%20d%3D%22M47.7%2031.5h4.6v4.8h4.8v4.6h-4.8v4.8h-4.6v-4.8h-4.8v-4.6h4.8z%22%2F%3E%3Cg%3E%3Cpath%20d%3D%22M33.5%2072C29%2067.5%2025.8%2062.5%2024.2%2056.5L21.8%2048.6C21.2%2046.4%2024%2045.3%2025%2047.4L28.2%2055.3%22%2F%3E%3Cpath%20d%3D%22M47.2%2072V66.8C47.2%2064.8%2046.3%2063.3%2044.8%2062.2L37.6%2056.8C35.9%2055.6%2033.8%2057.3%2034.9%2059.1L39.8%2063.6%22%2F%3E%3Crect%20x%3D%2231.6%22%20y%3D%2272%22%20width%3D%2216.8%22%20height%3D%225.6%22%20rx%3D%221.6%22%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%22translate%28100%200%29%20scale%28-1%201%29%22%3E%3Cpath%20d%3D%22M33.5%2072C29%2067.5%2025.8%2062.5%2024.2%2056.5L21.8%2048.6C21.2%2046.4%2024%2045.3%2025%2047.4L28.2%2055.3%22%2F%3E%3Cpath%20d%3D%22M47.2%2072V66.8C47.2%2064.8%2046.3%2063.3%2044.8%2062.2L37.6%2056.8C35.9%2055.6%2033.8%2057.3%2034.9%2059.1L39.8%2063.6%22%2F%3E%3Crect%20x%3D%2231.6%22%20y%3D%2272%22%20width%3D%2216.8%22%20height%3D%225.6%22%20rx%3D%221.6%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E",
   },
 
   colores: {
